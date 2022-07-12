@@ -1,21 +1,21 @@
-public class Professores extends FuncionariosUniversidade {
+public class Professores extends FuncionariosUniversidade{
 
     public String nivelGraduacao;
     public String disciplinaMinistrada;
     public int quantidadeAlunos;
     public  int quantidadeTurmas;
 
-    public Professores(String cpf, String numeroDeRegistro, String orgaoDeLotacao, Double salario) {
-        super(cpf, numeroDeRegistro, orgaoDeLotacao, salario);
-
-    }
-
-    public Professores(String cpf, String numeroDeRegistro, String orgaoDeLotacao, Double salario, String nivelGraduacao, String disciplinaMinistrada, int quantidadeAlunos, int quantidadeTurmas) {
-        super(cpf, numeroDeRegistro, orgaoDeLotacao, salario);
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int quantidadeAlunos, int quantidadeTurmas) {
+        super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
         this.nivelGraduacao = nivelGraduacao;
         this.disciplinaMinistrada = disciplinaMinistrada;
         this.quantidadeAlunos = quantidadeAlunos;
         this.quantidadeTurmas = quantidadeTurmas;
+    }
+
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+        super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
+
     }
 
     public String getNivelGraduacao() {
@@ -49,4 +49,19 @@ public class Professores extends FuncionariosUniversidade {
     public void setQuantidadeTurmas(int quantidadeTurmas) {
         this.quantidadeTurmas = quantidadeTurmas;
     }
+
+    private double salario(){
+        return getSalario() * 0.10;
+
+    }
+
+    public int aumentarTurma(){
+        return aumentarTurma = numeroDeTurma;
+    }
 }
+
+
+
+
+
+

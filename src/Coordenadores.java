@@ -1,9 +1,14 @@
-public class Coordenadores extends FuncionariosUniversidade {
+public class Coordenadores extends FuncionariosUniversidade{
 
     public int professoresSupervisionados;
 
-    public Coordenadores(String cpf, String numeroDeRegistro, String orgaoDeLotacao, Double salario) {
-        super(cpf, numeroDeRegistro, orgaoDeLotacao, salario);
+    public Coordenadores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+        super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
+
+    }
+    public Coordenadores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, int professoresSupervisionados) {
+        super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
+        this.professoresSupervisionados = professoresSupervisionados;
     }
 
     public int getProfessoresSupervisionados() {
@@ -14,12 +19,9 @@ public class Coordenadores extends FuncionariosUniversidade {
         this.professoresSupervisionados = professoresSupervisionados;
     }
 
-    @Override
-    public double aumentasalario() {
-        return aumentoSalario += getSalario() * 0.05;
-    }
-
-    {
+    private double salario(){
+        return getSalario() * 0.05;
 
     }
 }
+

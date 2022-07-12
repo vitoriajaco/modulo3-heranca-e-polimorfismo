@@ -1,21 +1,24 @@
 public abstract class FuncionariosUniversidade {
-    public static void main(String[] args) {
-
-    }
 
     public String nome;
     private String cpf;
-    private String numeroDeRegistro;
-    private String orgaoDeLotacao;
-    private Double salario;
+    private String numeroRegistro;
+    private  String orgaoLotacao;
+    private double salario;
 
-    public double aumentoSalario;
+    public double aumentarSalario;
 
+    public int aumentarTurma;
 
-    public FuncionariosUniversidade(String cpf, String numeroDeRegistro, String orgaoDeLotacao, Double salario) {
+    public String aumentarProfessor;
+
+    public int numeroDeTurma;
+
+    public FuncionariosUniversidade(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+        this.nome = nome;
         this.cpf = cpf;
-        this.numeroDeRegistro = numeroDeRegistro;
-        this.orgaoDeLotacao = orgaoDeLotacao;
+        this.numeroRegistro = numeroRegistro;
+        this.orgaoLotacao = orgaoLotacao;
         this.salario = salario;
     }
 
@@ -35,39 +38,33 @@ public abstract class FuncionariosUniversidade {
         this.cpf = cpf;
     }
 
-    public String getNumeroDeRegistro() {
-        return numeroDeRegistro;
+    public String getNumeroRegistro() {
+        return numeroRegistro;
     }
 
-    public void setNumeroDeRegistro(String numeroDeRegistro) {
-        this.numeroDeRegistro = numeroDeRegistro;
+    public void setNumeroRegistro(String numeroRegistro) {
+        this.numeroRegistro = numeroRegistro;
     }
 
-    public String getOrgaoDeLotacao() {
-        return orgaoDeLotacao;
+    public String getOrgaoLotacao() {
+        return orgaoLotacao;
     }
 
-    public void setOrgaoDeLotacao(String orgaoDeLotacao) {
-        this.orgaoDeLotacao = orgaoDeLotacao;
+    public void setOrgaoLotacao(String orgaoLotacao) {
+        this.orgaoLotacao = orgaoLotacao;
     }
 
-    public Double getSalario() {
+    public double getSalario() {
         return salario;
     }
 
-    public void setSalario(Double salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
-
-    public double aumentoSalario() {
-
-        return aumentoSalario += salario * 0.10;
-
-    }
-
-    public abstract double aumentasalario();
-
 }
+
+
+
 
 
 
