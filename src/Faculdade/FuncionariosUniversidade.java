@@ -1,3 +1,5 @@
+package Faculdade;
+
 public abstract class FuncionariosUniversidade {
 
     public String nome;
@@ -6,13 +8,12 @@ public abstract class FuncionariosUniversidade {
     private  String orgaoLotacao;
     private double salario;
 
-    public double aumentarSalario;
 
-    public int aumentarTurma;
+    public static int aumentarTurma;
 
     public String aumentarProfessor;
 
-    public int numeroDeTurma;
+    public static int numeroDeTurma;
 
     public FuncionariosUniversidade(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
         this.nome = nome;
@@ -22,9 +23,15 @@ public abstract class FuncionariosUniversidade {
         this.salario = salario;
     }
 
+    public abstract void aumentarSalario();
+
+
+
     public String getNome() {
         return nome;
     }
+
+
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -60,6 +67,11 @@ public abstract class FuncionariosUniversidade {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+    public String setAumentarProfessor(){
+        System.out.println("Insira o nome do professor: ");
+        return aumentarProfessor;
     }
 }
 

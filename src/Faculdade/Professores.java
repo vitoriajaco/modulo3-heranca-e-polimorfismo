@@ -1,3 +1,5 @@
+package Faculdade;
+
 public class Professores extends FuncionariosUniversidade{
 
     public String nivelGraduacao;
@@ -16,6 +18,18 @@ public class Professores extends FuncionariosUniversidade{
     public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
 
+    }
+
+    @Override
+    public void aumentarSalario() {
+        double acrescimo =  getSalario() * 0.10;
+        double salarioNovo = getSalario() + acrescimo;
+        setSalario(salarioNovo);
+    }
+
+    public void adicionaTurma(){
+        int quantidadeTurmas = getQuantidadeTurmas() + 1;
+        setQuantidadeTurmas(quantidadeTurmas);
     }
 
     public String getNivelGraduacao() {
@@ -50,12 +64,13 @@ public class Professores extends FuncionariosUniversidade{
         this.quantidadeTurmas = quantidadeTurmas;
     }
 
-    private double salario(){
-        return getSalario() * 0.10;
+    public double salario(double salario){
+        salario = getSalario() * 0.10;
+        return salario;
 
     }
 
-    public int aumentarTurma(){
+    public static int aumentarTurma(int i){
         return aumentarTurma = numeroDeTurma;
     }
 }
