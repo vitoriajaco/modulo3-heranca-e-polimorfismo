@@ -1,8 +1,6 @@
 package Faculdade;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Coordenadores extends FuncionariosUniversidade {
 
@@ -15,12 +13,14 @@ public class Coordenadores extends FuncionariosUniversidade {
 
     }
 
-    @Override
-    public void aumentarSalario() {
-        double salarioNovo = getSalario() * 0.05;
-        setSalario(salarioNovo);
+    public Salario aumentarSalario(Salario aumentarSalario) {
+        return aumentarSalario;
 
     }
+    public Salario reembolsoDespesas (Salario reembolsodespesa) {
+        return reembolsodespesa;
+    }
+
 
     public void adicionarProfessor(Professores professor){
         this.professoresSupervisionados.add(professor);
@@ -35,21 +35,8 @@ public class Coordenadores extends FuncionariosUniversidade {
         this.professoresSupervisionados = professoresSupervisionados;
     }
 
-
-
-
-//    private Set<Professores> nomelista = new HashSet<>();
-
-//    public void adicionarProfessor(Professores professor){
-//        this.professoresSupervisionados.add(professor);
-//    }
-
-//    public void professoresCoordenados() {
-//        System.out.println("listaDeProfessoresCordenados: ");
-//        for(Professores p:professoresSupervisionados){
-//            System.out.println("Nome do professor supervisionado: " + p.getNome());
-//
-//        }
-//
-//    }
+    @Override
+    public Salario aumentarSalario() {
+        return null;
+    }
 }

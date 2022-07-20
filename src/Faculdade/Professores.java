@@ -1,6 +1,8 @@
 package Faculdade;
 
-public class Professores extends FuncionariosUniversidade{
+import java.util.List;
+
+public abstract class Professores extends FuncionariosUniversidade{
 
     public String nivelGraduacao;
     public String disciplinaMinistrada;
@@ -19,19 +21,28 @@ public class Professores extends FuncionariosUniversidade{
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
 
     }
+    public List<Estagiario> estagiariosSupervisionados;
 
-    @Override
-    public void aumentarSalario() {
-        double acrescimo =  getSalario() * 0.10;
-        double salarioNovo = getSalario() + acrescimo;
-        setSalario(salarioNovo);
+    public void adicionarEstagiario(Estagiario estagiario){
+        this.estagiariosSupervisionados.add(estagiario);
     }
 
-    public void adicionaTurma(){
-        int quantidadeTurmas = getQuantidadeTurmas() + 1;
-        setQuantidadeTurmas(quantidadeTurmas);
+
+    public List<Estagiario> getEstagiariosSupervisionados() {
+        return estagiariosSupervisionados;
+    }
+    public Salario aumentarSalario(Salario aumentarsalario) {
+        return aumentarSalario();
+
+    }
+    public Salario reembolsoDespesas (Salario reembolsodespesa) {
+        return reembolsodespesa;
     }
 
+
+    public void adicionaTurma(Turma turma){
+
+    }
     public String getNivelGraduacao() {
         return nivelGraduacao;
     }
@@ -60,14 +71,14 @@ public class Professores extends FuncionariosUniversidade{
         return quantidadeTurmas;
     }
 
-    public void setQuantidadeTurmas(int quantidadeTurmas) {
+    public void setQuantidadeTurmas() {
         this.quantidadeTurmas = quantidadeTurmas;
     }
 
-    public double salario(double salario){
-        salario = getSalario() * 0.10;
-        return salario;
 
+    @Override
+    public void setSalario(double salario) {
+        super.setSalario(salario);
     }
 
     public static int aumentarTurma(int i){

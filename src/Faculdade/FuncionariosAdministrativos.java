@@ -11,10 +11,24 @@ public String senioridade;
     }
 
     @Override
-    public void aumentarSalario() {
-        double novoSalario = getSalario() * 0.10;
-        setSalario(novoSalario);
+    public Salario aumentarSalario() {
+        return null;
+    }
 
+    //
+//    @Override
+//    public Salario aumentarSalario() {
+//        double novoSalario = getSalario() * 0.10;
+//        setSalario(novoSalario);
+//
+//        return null;
+//    }
+    public Salario aumentarSalario(Salario aumentarsalario) {
+    return aumentarSalario();
+
+}
+    public Salario reembolsoDespesas (Salario reembolsodespesa) {
+        return reembolsodespesa;
     }
 
     public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String funcaoAdministrativa, String senioridade) {

@@ -23,15 +23,11 @@ public abstract class FuncionariosUniversidade {
         this.salario = salario;
     }
 
-    public abstract void aumentarSalario();
-
-
+    public abstract Salario aumentarSalario();
 
     public String getNome() {
         return nome;
     }
-
-
 
     public void setNome(String nome) {
         this.nome = nome;
