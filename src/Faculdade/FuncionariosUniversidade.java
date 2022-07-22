@@ -6,24 +6,26 @@ public abstract class FuncionariosUniversidade {
     private String cpf;
     private String numeroRegistro;
     private  String orgaoLotacao;
-    private double salario;
 
+    private Remuneracao remuneracao;
 
-    public static int aumentarTurma;
-
-    public String aumentarProfessor;
-
-    public static int numeroDeTurma;
-
-    public FuncionariosUniversidade(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+    public FuncionariosUniversidade(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Remuneracao remuneracao) {
         this.nome = nome;
         this.cpf = cpf;
         this.numeroRegistro = numeroRegistro;
         this.orgaoLotacao = orgaoLotacao;
-        this.salario = salario;
+        this.remuneracao = remuneracao;
     }
 
-    public abstract Salario aumentarSalario();
+
+    private void solicitarReembolso (double valor){
+        System.out.println("Reembolso Solicitado");
+
+    }
+
+
+    public abstract void aumentarSalario();
+
 
     public String getNome() {
         return nome;
@@ -57,18 +59,15 @@ public abstract class FuncionariosUniversidade {
         this.orgaoLotacao = orgaoLotacao;
     }
 
-    public double getSalario() {
-        return salario;
+    public Remuneracao getRemuneracao() {
+        return remuneracao;
     }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
+    public void setRemuneracao(Remuneracao remuneracao) {
+        this.remuneracao = remuneracao;
     }
 
-    public String setAumentarProfessor(){
-        System.out.println("Insira o nome do professor: ");
-        return aumentarProfessor;
-    }
+
 }
 
 

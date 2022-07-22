@@ -2,14 +2,19 @@ package Faculdade;
 
 import java.util.List;
 
-public abstract class Professores extends FuncionariosUniversidade{
+
+public class Professores extends FuncionariosUniversidade{
+
 
     public String nivelGraduacao;
     public String disciplinaMinistrada;
     public int quantidadeAlunos;
     public  int quantidadeTurmas;
 
-    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int quantidadeAlunos, int quantidadeTurmas) {
+    public List<Estagiario> estagiarios;
+
+
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario, String nivelGraduacao, String disciplinaMinistrada, int quantidadeAlunos, int quantidadeTurmas) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
         this.nivelGraduacao = nivelGraduacao;
         this.disciplinaMinistrada = disciplinaMinistrada;
@@ -17,32 +22,41 @@ public abstract class Professores extends FuncionariosUniversidade{
         this.quantidadeTurmas = quantidadeTurmas;
     }
 
-    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
 
     }
     public List<Estagiario> estagiariosSupervisionados;
 
-    public void adicionarEstagiario(Estagiario estagiario){
-        this.estagiariosSupervisionados.add(estagiario);
+
+    public List<Estagiario> getEstagiarios() {
+        return estagiarios;
+    }
+
+    public void setEstagiarios(Estagiario estagiario) {
+        if(estagiarios.size() == 2) {
+            System.out.println("Professor já tem capacidade maxima de estagiarios");
+        } else {
+            this.estagiarios.add(estagiario);
+            System.out.println("Pode inserir mais estagiarios");
+        }
+
+    }
+
+    @Override
+    public void aumentarSalario() {
+        double acrescimo =  getRemuneracao().getValor() * 0.10;
+        double salarioNovo = getRemuneracao().getValor() + acrescimo;
+        setRemuneracao(new Salario(salarioNovo));
     }
 
 
-    public List<Estagiario> getEstagiariosSupervisionados() {
-        return estagiariosSupervisionados;
-    }
-    public Salario aumentarSalario(Salario aumentarsalario) {
-        return aumentarSalario();
+    public void adicionaTurma(){
+        int quantidadeTurmas = getQuantidadeTurmas() + 1;
+        setQuantidadeTurmas(quantidadeTurmas);
 
     }
-    public Salario reembolsoDespesas (Salario reembolsodespesa) {
-        return reembolsodespesa;
-    }
 
-
-    public void adicionaTurma(Turma turma){
-
-    }
     public String getNivelGraduacao() {
         return nivelGraduacao;
     }
@@ -71,19 +85,10 @@ public abstract class Professores extends FuncionariosUniversidade{
         return quantidadeTurmas;
     }
 
-    public void setQuantidadeTurmas() {
+    public void setQuantidadeTurmas(int quantidadeTurmas) {
         this.quantidadeTurmas = quantidadeTurmas;
     }
 
-
-    @Override
-    public void setSalario(double salario) {
-        super.setSalario(salario);
-    }
-
-    public static int aumentarTurma(int i){
-        return aumentarTurma = numeroDeTurma;
-    }
 }
 
 

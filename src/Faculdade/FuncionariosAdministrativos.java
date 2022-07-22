@@ -1,40 +1,20 @@
 package Faculdade;
 
-public class FuncionariosAdministrativos extends FuncionariosUniversidade{
+public class FuncionariosAdministrativos extends FuncionariosUniversidade {
 
-public String funcaoAdministrativa;
-public String senioridade;
+    private String funcaoAdministrativa;
+    private String senioridade;
 
 
-    public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+    public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
     }
 
     @Override
-    public Salario aumentarSalario() {
-        return null;
-    }
+    public void aumentarSalario() {
+        double novoSalario = getRemuneracao().getValor() * 0.10;
+        setRemuneracao(new Remuneracao(novoSalario));
 
-    //
-//    @Override
-//    public Salario aumentarSalario() {
-//        double novoSalario = getSalario() * 0.10;
-//        setSalario(novoSalario);
-//
-//        return null;
-//    }
-    public Salario aumentarSalario(Salario aumentarsalario) {
-    return aumentarSalario();
-
-}
-    public Salario reembolsoDespesas (Salario reembolsodespesa) {
-        return reembolsodespesa;
-    }
-
-    public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String funcaoAdministrativa, String senioridade) {
-        super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
-        this.funcaoAdministrativa = funcaoAdministrativa;
-        this.senioridade = senioridade;
     }
 
     public String getFuncaoAdministrativa() {
@@ -52,7 +32,4 @@ public String senioridade;
     public void setSenioridade(String senioridade) {
         this.senioridade = senioridade;
     }
-
-
-
 }

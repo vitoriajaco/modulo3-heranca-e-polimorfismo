@@ -7,14 +7,17 @@ public class Coordenadores extends FuncionariosUniversidade {
     public List<Professores> professoresSupervisionados;
 
 
-    public Coordenadores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, List<Professores> professoresSupervisionados) {
+    public Coordenadores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario, List<Professores> professoresSupervisionados) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
         this.professoresSupervisionados = professoresSupervisionados;
 
     }
 
-    public Salario aumentarSalario(Salario aumentarSalario) {
-        return aumentarSalario;
+    @Override
+    public void aumentarSalario() {
+        double salarioNovo = getRemuneracao().getValor()  * 0.05;
+
+        setRemuneracao(new Salario(salarioNovo));
 
     }
     public Salario reembolsoDespesas (Salario reembolsodespesa) {
@@ -35,8 +38,5 @@ public class Coordenadores extends FuncionariosUniversidade {
         this.professoresSupervisionados = professoresSupervisionados;
     }
 
-    @Override
-    public Salario aumentarSalario() {
-        return null;
-    }
+
 }
