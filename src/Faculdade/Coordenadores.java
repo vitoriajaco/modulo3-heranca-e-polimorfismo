@@ -9,7 +9,7 @@ public class Coordenadores extends FuncionariosUniversidade {
     public List<Professores> professoresSupervisionados;
 
 
-    public Coordenadores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, List<Professores> professoresSupervisionados) {
+    public Coordenadores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario, List<Professores> professoresSupervisionados) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
         this.professoresSupervisionados = professoresSupervisionados;
 
@@ -17,8 +17,9 @@ public class Coordenadores extends FuncionariosUniversidade {
 
     @Override
     public void aumentarSalario() {
-        double salarioNovo = getSalario() * 0.05;
-        setSalario(salarioNovo);
+        double salarioNovo = getRemuneracao().getValor()  * 0.05;
+
+        setRemuneracao(new Salario(salarioNovo));
 
     }
 

@@ -6,18 +6,18 @@ public String funcaoAdministrativa;
 public String senioridade;
 
 
-    public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+    public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
     }
 
     @Override
     public void aumentarSalario() {
-        double novoSalario = getSalario() * 0.10;
-        setSalario(novoSalario);
+        double novoSalario = getRemuneracao().getValor() * 0.10;
+        setRemuneracao(new Remuneracao(novoSalario));
 
     }
 
-    public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String funcaoAdministrativa, String senioridade) {
+    public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario, String funcaoAdministrativa, String senioridade) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
         this.funcaoAdministrativa = funcaoAdministrativa;
         this.senioridade = senioridade;

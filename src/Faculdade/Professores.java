@@ -1,5 +1,7 @@
 package Faculdade;
 
+import java.util.List;
+
 public class Professores extends FuncionariosUniversidade{
 
     public String nivelGraduacao;
@@ -7,7 +9,10 @@ public class Professores extends FuncionariosUniversidade{
     public int quantidadeAlunos;
     public  int quantidadeTurmas;
 
-    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int quantidadeAlunos, int quantidadeTurmas) {
+    public List<Estagiario> estagiarios;
+
+
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario, String nivelGraduacao, String disciplinaMinistrada, int quantidadeAlunos, int quantidadeTurmas) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
         this.nivelGraduacao = nivelGraduacao;
         this.disciplinaMinistrada = disciplinaMinistrada;
@@ -15,17 +20,32 @@ public class Professores extends FuncionariosUniversidade{
         this.quantidadeTurmas = quantidadeTurmas;
     }
 
-    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
+
+    }
+
+    public List<Estagiario> getEstagiarios() {
+        return estagiarios;
+    }
+
+    public void setEstagiarios(Estagiario estagiario) {
+        if(estagiarios.size() == 2) {
+            System.out.println("Professor já tem capacidade maxima de estagiarios");
+        } else {
+            this.estagiarios.add(estagiario);
+            System.out.println("Pode inserir mais estagiarios");
+        }
 
     }
 
     @Override
     public void aumentarSalario() {
-        double acrescimo =  getSalario() * 0.10;
-        double salarioNovo = getSalario() + acrescimo;
-        setSalario(salarioNovo);
+        double acrescimo =  getRemuneracao().getValor() * 0.10;
+        double salarioNovo = getRemuneracao().getValor() + acrescimo;
+        setRemuneracao(new Salario(salarioNovo));
     }
+
 
     public void adicionaTurma(){
         int quantidadeTurmas = getQuantidadeTurmas() + 1;
@@ -64,15 +84,7 @@ public class Professores extends FuncionariosUniversidade{
         this.quantidadeTurmas = quantidadeTurmas;
     }
 
-    public double salario(double salario){
-        salario = getSalario() * 0.10;
-        return salario;
 
-    }
-
-    public static int aumentarTurma(int i){
-        return aumentarTurma = numeroDeTurma;
-    }
 }
 
 

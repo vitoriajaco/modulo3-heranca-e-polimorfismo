@@ -13,18 +13,17 @@ public class Main {
         List<FuncionariosUniversidade> list = new ArrayList<>();
 
        Professores professores;
-        professores = new Professores("Julia", "52256455", "8965", "PROF-PE", 1000.00, "Doutorado", "Geografia", 20, 3);
-        Professores professores2 = new Professores("Pedro", "5625255", "8966", "PROF-BA", 2000, "Mestrado", "Historia", 15, 5 );
-        Professores professores3 = new Professores("Maria", "589521", "7878", "PROF-SE", 1500, "Pos", "Matematica", 30, 3 );
+        professores = new Professores("Julia", "52256455", "8965", "PROF-PE", new Salario(1000), "Doutorado", "Geografia", 20, 3);
+        Professores professores2 = new Professores("Pedro", "5625255", "8966", "PROF-BA", new Salario(200), "Mestrado", "Historia", 15, 5 );
+        Professores professores3 = new Professores("Maria", "589521", "7878", "PROF-SE", new Salario(500), "Pos", "Matematica", 30, 3 );
 
-//        String ArrayList = "";
-//        System.out.println(ArrayList);
+
 
 
         System.out.println(professores.getNome());
-        System.out.println(professores.getSalario());
+        System.out.println(professores.getRemuneracao().getValor());
         professores.aumentarSalario();
-        System.out.println(professores.getSalario());
+        System.out.println(professores.getRemuneracao().getValor());
 
 
 
