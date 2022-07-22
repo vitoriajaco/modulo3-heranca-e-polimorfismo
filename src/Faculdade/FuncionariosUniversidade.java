@@ -17,7 +17,7 @@ public abstract class FuncionariosUniversidade {
         this.remuneracao = remuneracao;
     }
 
-<<<<<<< HEAD
+
 
     private void solicitarReembolso (double valor){
         System.out.println("Reembolso Solicitado");
@@ -26,18 +26,15 @@ public abstract class FuncionariosUniversidade {
 
 
     public abstract void aumentarSalario();
-=======
+
     public abstract Salario aumentarSalario();
->>>>>>> f75e668b703e4389f33bb16b1d8428559e347c8a
+
 
     public String getNome() {
         return nome;
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f75e668b703e4389f33bb16b1d8428559e347c8a
     public void setNome(String nome) {
         this.nome = nome;
     }

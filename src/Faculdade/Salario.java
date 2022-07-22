@@ -1,13 +1,13 @@
 package Faculdade;
 
-<<<<<<< HEAD
+
 public class Salario extends Remuneracao {
 
     public Salario(double valor) {
         super(valor);
 
     }
-=======
+
 public class Salario {
 
     private double salario;
@@ -38,5 +38,5 @@ public class Salario {
 
         return 0;
     }
->>>>>>> f75e668b703e4389f33bb16b1d8428559e347c8a
+
 }

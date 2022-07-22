@@ -2,11 +2,10 @@ package Faculdade;
 
 import java.util.List;
 
-<<<<<<< HEAD
+
 public class Professores extends FuncionariosUniversidade{
-=======
 public abstract class Professores extends FuncionariosUniversidade{
->>>>>>> f75e668b703e4389f33bb16b1d8428559e347c8a
+
 
     public String nivelGraduacao;
     public String disciplinaMinistrada;
@@ -30,7 +29,7 @@ public abstract class Professores extends FuncionariosUniversidade{
     }
     public List<Estagiario> estagiariosSupervisionados;
 
-<<<<<<< HEAD
+
     public List<Estagiario> getEstagiarios() {
         return estagiarios;
     }
@@ -56,7 +55,7 @@ public abstract class Professores extends FuncionariosUniversidade{
     public void adicionaTurma(){
         int quantidadeTurmas = getQuantidadeTurmas() + 1;
         setQuantidadeTurmas(quantidadeTurmas);
-=======
+
     public void adicionarEstagiario(Estagiario estagiario){
         this.estagiariosSupervisionados.add(estagiario);
     }
@@ -71,7 +70,7 @@ public abstract class Professores extends FuncionariosUniversidade{
     }
     public Salario reembolsoDespesas (Salario reembolsodespesa) {
         return reembolsodespesa;
->>>>>>> f75e668b703e4389f33bb16b1d8428559e347c8a
+
     }
 
 

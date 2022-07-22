@@ -1,6 +1,6 @@
 package Faculdade;
 
-<<<<<<< HEAD
+
 public class Estagiario extends FuncionariosUniversidade {
 
 
@@ -11,12 +11,12 @@ public class Estagiario extends FuncionariosUniversidade {
     @Override
     public void aumentarSalario() {
 
-=======
-public class Estagiario {
 
-    public Salario bolsa(Salario bolsa) {
-        return bolsa;
->>>>>>> f75e668b703e4389f33bb16b1d8428559e347c8a
+        public class Estagiario {
+
+            public Salario bolsa(Salario bolsa) {
+                return bolsa;
+
+            }
+        }
     }
-}
-
