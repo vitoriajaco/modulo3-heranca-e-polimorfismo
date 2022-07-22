@@ -18,7 +18,6 @@ public abstract class FuncionariosUniversidade {
     }
 
 
-
     private void solicitarReembolso (double valor){
         System.out.println("Reembolso Solicitado");
 
@@ -27,13 +26,10 @@ public abstract class FuncionariosUniversidade {
 
     public abstract void aumentarSalario();
 
-    public abstract Salario aumentarSalario();
-
 
     public String getNome() {
         return nome;
     }
-
 
     public void setNome(String nome) {
         this.nome = nome;

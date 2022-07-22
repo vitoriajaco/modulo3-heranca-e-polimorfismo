@@ -11,12 +11,5 @@ public class Estagiario extends FuncionariosUniversidade {
     @Override
     public void aumentarSalario() {
 
-
-        public class Estagiario {
-
-            public Salario bolsa(Salario bolsa) {
-                return bolsa;
-
-            }
-        }
     }
+}

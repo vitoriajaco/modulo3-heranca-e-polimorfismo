@@ -4,7 +4,6 @@ import java.util.List;
 
 
 public class Professores extends FuncionariosUniversidade{
-public abstract class Professores extends FuncionariosUniversidade{
 
 
     public String nivelGraduacao;
@@ -56,27 +55,8 @@ public abstract class Professores extends FuncionariosUniversidade{
         int quantidadeTurmas = getQuantidadeTurmas() + 1;
         setQuantidadeTurmas(quantidadeTurmas);
 
-    public void adicionarEstagiario(Estagiario estagiario){
-        this.estagiariosSupervisionados.add(estagiario);
     }
 
-
-    public List<Estagiario> getEstagiariosSupervisionados() {
-        return estagiariosSupervisionados;
-    }
-    public Salario aumentarSalario(Salario aumentarsalario) {
-        return aumentarSalario();
-
-    }
-    public Salario reembolsoDespesas (Salario reembolsodespesa) {
-        return reembolsodespesa;
-
-    }
-
-
-    public void adicionaTurma(Turma turma){
-
-    }
     public String getNivelGraduacao() {
         return nivelGraduacao;
     }
@@ -105,22 +85,10 @@ public abstract class Professores extends FuncionariosUniversidade{
         return quantidadeTurmas;
     }
 
-    public void setQuantidadeTurmas() {
+    public void setQuantidadeTurmas(int quantidadeTurmas) {
         this.quantidadeTurmas = quantidadeTurmas;
     }
 
-
-<<<<<<< HEAD
-=======
-    @Override
-    public void setSalario(double salario) {
-        super.setSalario(salario);
-    }
-
-    public static int aumentarTurma(int i){
-        return aumentarTurma = numeroDeTurma;
-    }
->>>>>>> f75e668b703e4389f33bb16b1d8428559e347c8a
 }
 
 

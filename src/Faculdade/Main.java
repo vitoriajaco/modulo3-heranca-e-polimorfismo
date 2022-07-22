@@ -20,15 +20,6 @@ public class Main {
 
 
 
-        professores = new Professores("Julia", "52256455", "8965", "PROF-PE", 1000.00, "Doutorado", "Geografia", 20, 3) {
-            @Override
-            public Salario aumentarSalario() {
-
-
-                return null;
-            }
-        };
-
         System.out.println(professores.getNome());
         System.out.println(professores.getRemuneracao().getValor());
         professores.aumentarSalario();

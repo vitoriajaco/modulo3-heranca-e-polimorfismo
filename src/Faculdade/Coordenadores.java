@@ -13,39 +13,30 @@ public class Coordenadores extends FuncionariosUniversidade {
 
     }
 
-
     @Override
     public void aumentarSalario() {
-        double salarioNovo = getRemuneracao().getValor() * 0.05;
+        double salarioNovo = getRemuneracao().getValor()  * 0.05;
 
         setRemuneracao(new Salario(salarioNovo));
 
-        public Salario aumentarSalario (Salario aumentarSalario){
-            return aumentarSalario;
-
-
-        }
-        public Salario reembolsoDespesas (Salario reembolsodespesa){
-            return reembolsodespesa;
-        }
-
-
-        public void adicionarProfessor (Professores professor){
-            this.professoresSupervisionados.add(professor);
-        }
-
-
-        public List<Professores> getProfessoresSupervisionados () {
-            return professoresSupervisionados;
-        }
-
-        public void setProfessoresSupervisionados (List < Professores > professoresSupervisionados) {
-            this.professoresSupervisionados = professoresSupervisionados;
-        }
-
-        @Override
-        public Salario aumentarSalario () {
-            return null;
-        }
     }
+    public Salario reembolsoDespesas (Salario reembolsodespesa) {
+        return reembolsodespesa;
+    }
+
+
+    public void adicionarProfessor(Professores professor){
+        this.professoresSupervisionados.add(professor);
+   }
+
+
+    public List<Professores> getProfessoresSupervisionados() {
+        return professoresSupervisionados;
+    }
+
+    public void setProfessoresSupervisionados(List<Professores> professoresSupervisionados) {
+        this.professoresSupervisionados = professoresSupervisionados;
+    }
+
+
 }
