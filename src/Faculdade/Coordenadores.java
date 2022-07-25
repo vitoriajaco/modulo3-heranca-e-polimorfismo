@@ -6,6 +6,8 @@ public class Coordenadores extends FuncionariosUniversidade {
 
     public List<Professores> professoresSupervisionados;
 
+    // mudança no código
+
 
     public Coordenadores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, Salario salario, List<Professores> professoresSupervisionados) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
